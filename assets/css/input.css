@@ -4,10 +4,39 @@
 @plugin "@iconify/tailwind4";
 
 @theme {
+
+    /*TIPOGRAFIAS DEL PROJECT OWO*/
     --font-primary: "Fraunces", sans-serif;
     /*heading*/
     --font-secondary: "Inter", sans-serif;
     /*subheading*/
     --font-tertiary: "Plus Jakarta Sans", sans-serif;
     /*paragraph*/
+
+    /* PALETA DE COLORES (HEX) */
+    --color-primary: #1B2447;
+    /* Navy - Color principal de marca, botones, encabezados */
+    --color-primary-glow: #3D5BB8;
+    /* Hover, gradientes, acentos suaves */
+    --color-accent: #D6452C;
+    /* Rojo - CTAs secundarios, highlights, énfasis */
+    --color-foreground: #16192B;
+    /* Texto principal */
+    --color-muted-foreground: #6B7184;
+    /* Texto secundario */
+    --color-background: #FFFFFF;
+    /* Fondo general */
+    --color-secondary: #F2F4F8;
+    /* Fondos suaves de sección */
+    --color-muted: #F2F4F8;
+    /* Muted */
+    --color-border: #E4E7EE;
+    /* Bordes y divisores */
+    --color-footer-dark: #0F1330;
+    /* Fondo del footer */
+
+    /*shadowssowo*/
+    --shadow-accent: 0px -10px 100px 0px rgba(214, 69, 44, 0.50);
+
+
 }

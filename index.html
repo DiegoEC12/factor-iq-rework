@@ -11,15 +11,15 @@
 
 <body class="font-family">
     <header class="bg-white shadow-md top-0 sticky z-50 border-blue-500">
-        <div class="flex justify-between items-center px-4 h-[12vh] w-full mx-auto z-50">
+        <div class="flex justify-between items-center px-4 h-[12vh] max-w-7xl mx-auto z-50">
             <div class="h-full py-4">
                 <a href="index.html">
                     <img class="h-full" src="assets/img/logo-transparent.png" alt="Logo">
                 </a>
             </div>
             <nav id="menu"
-                class="hidden flex-col absolute lg:relative top-[12vh] lg:top-0 left-0 lg:bg-transparent w-full h-screen lg:h-full bg-blue-900 lg:flex lg:flex-row h-full">
-                <ul class="flex flex-col lg:flex-row gap-4 w-full lg:py-0 py-4 items-center justify-center text-center">
+                class="hidden z-10 flex-col absolute lg:relative top-[12vh] lg:top-0 left-0 lg:bg-transparent w-full h-screen lg:h-full bg-primary lg:flex lg:flex-row h-full">
+                <ul class="flex flex-col justify-end lg:flex-row gap-4 w-full lg:py-0 py-4 items-center text-center">
                     <li class="lg:h-full h-20 w-full lg:w-auto flex items-center justify-center">
                         <a class="cursor-pointer flex justify-center items-center w-full h-full lg:border-b-2 lg:border-blue-500 hover:bg-blue-800 lg:hover:bg-transparent lg:hover:text-blue-500 px-2 text-white lg:text-gray-500"
                             href="index.html">Inicio</a>
@@ -42,17 +42,13 @@
                             informáticos</a>
                     </li>
                     <li class="lg:h-full h-20 w-full lg:w-auto flex items-center justify-center">
-                        <a class="cursor-pointer flex justify-center items-center w-full h-full lg:border-b-2 lg:border-transparent hover:bg-blue-800 lg:hover:bg-transparent lg:hover:text-blue-500 px-2 text-white lg:text-gray-500"
+                        <a class="cursor-pointer flex justify-center items-center w-full h-full lg:border-b-2  lg:bg-primary lg:hover:bg-primary-glow  px-2 lg:h-fit lg:py-2 lg:px-4 lg:rounded-2xl lg:border-1 lg:border-white/10  text-white lg:text-white"
                             href="pages/servicio_nube.html">Servicio
                             en la nube</a>
                     </li>
                 </ul>
             </nav>
-            <div class=" hidden lg:flex text-2xl gap-2">
-                <a href="#"><span class="icon-[ri--twitter-x-line] hover:text-blue-500"></span></a>
-                <a href="#"><span class="icon-[ri--facebook-fill] hover:text-blue-500"></span></a>
-                <a href="#"><span class="icon-[tabler--mail] hover:text-blue-500"></span></a>
-            </div>
+
             <div class="lg:hidden flex justify-center items-center">
                 <button id="btn-menu"><span class="icon-[ph--list-light] text-4xl text-blue-900"></span></button>
             </div>
@@ -60,19 +56,23 @@
     </header>
     <main>
         <!-- section Hero owo  -->
-        <section class="flex flex-col w-full md:h-[90vh] bg-linear-to-br from-[#071f44] to-[#1b5094]">
+        <section
+            class="flex relative  bg-repeat-no-repeat flex-col w-full lg:md:h-[90vh] bg-linear-to-br from-[#071f44] to-[#1b5094] py-0 md:py-4 ">
             <div
-                class="flex md:max-w-7xl mx-auto justify-center h-full gap-10 items-center p-4 md:p-8 xl:p-0 md:flex-row flex-col">
-                <div class="flex md:w-1/2 flex-col justify-center gap-6">
+                class="z-1 absolute bg-[radial-gradient(rgba(255,255,255,0.18)_1px,transparent_1px)] bg-[size:32px_32px] w-full h-full ">
+
+            </div>
+            <div class="z-2 flex md:max-w-7xl mx-auto justify-center h-full items-center lg:flex-row flex-col  ">
+                <div class="flex lg:w-1/2 flex-col justify-center px-6 py-10 gap-6">
                     <div
-                        class="w-fit rounded-2xl flex items-center gap-2 px-4 py-2  border-white backdrop:blur-md bg-white/10">
+                        class="w-fit rounded-2xl flex items-center gap-2 px-4 py-2 border-1  border-white/50 backdrop:blur-md bg-white/10">
                         <span class="w-2 h-2 bg-red-500 rounded-full"></span>
                         <span class=" text-white text-xs md:text-sm lg:text-md uppercase">Acompañamiento
                             estratégico</span>
                     </div>
-                    <h1 class="font-primary text-5xl md:text-5xl  xl:text-6xl  text-white">
-                        Organizaciones <span class="text-red-500">saludables,</span>
-                        <br>resultados extraordinarios.
+                    <h1 class="font-primary text-4xl md:text-6xl xl:text-7xl  text-white">
+                        Organizaciones <span class="text-red-500">saludables,</span><br>
+                        resultados extraordinarios.
                     </h1>
                     <p class="text-white/80 text-lg">En Factor IQ acompañamos a líderes y equipos para que el
                         compromiso
@@ -87,95 +87,28 @@
                             servicios</a>
                     </div>
                 </div>
-                <div class="md:w-1/2 flex justify-center">
-                    <img class=" max-w-md w-full md:w-full md:h-full object-cover p-4"
-                        src="./assets/img/hero-iq-transparent.png" alt="">
+                <div class="w-full lg:w-1/2 flex  justify-center  p-4 ">
+                    <img class="border-1 border-white/50 w-full object-cover rounded-2xl shadow-accent"
+                        src="./assets/img/hero.jpg" alt="">
                 </div>
             </div>
         </section>
-        <section class="flex flex-col w-full h-auto">
-            <div
-                class="flex md:max-w-7xl mx-auto justify-center h-full gap-10 items-center p-4 xl:p-0 md:flex-row flex-col">
-                <div class="md:w-1/2 flex justify-center">
-                    <img class=" max-w-md w-full md:w-full md:h-full object-cover p-4"
-                        src="./assets/img/nueva-plataforma.png" alt="">
+        <section class="p-4">
+            <div class="flex flex-col sm:flex-row md:max-w-7xl mx-auto justify-around w-full ">
+                <div class="flex flex-col items-center text-center p-4">
+                    <span class="icon-[solar--calendar-outline] text-4xl text-red-500"></span>
+                    <h2 class="text-2xl">+15Años </h2>
+                    <p>Años de experiencia</p>
                 </div>
-                <div class="md:w-1/2 flex flex-col justify-center gap-4">
-                    <div>
-                        <h2 class="text-3xl md:text-5xl  xl:text-6xl font-bold text-neutral-900">Nueva Plataforma online
-                            orientada a clientes</h2>
-
-                    </div>
-                    <div class="flex flex-col gap-4">
-                        <details open class="flex flex-col border-t border-gray-300 cursor-pointer">
-                            <summary class="flex gap-4 items-center p-4">
-                                <span class="icon-[ph--eye] p-2 text-2xl text-blue-900"></span>
-                                <h4 class="text-blue-900 text-lg font-bold">Visualizacion amigable con el usuario</h4>
-                            </summary>
-                            <p class="text-gray-500 text-md px-15">Ofrecemos servicios de consultoría y asesoramiento
-                                para
-                                empresas
-                                que buscan
-                                mejorar su gestión y potenciar su crecimiento.
-                            </p>
-                        </details>
-                        <details class="flex flex-col border-t border-gray-300 cursor-pointer">
-                            <summary class="flex gap-4 items-center  p-4">
-                                <span class="icon-[pepicons-pencil--cloud-down] p-2 text-2xl text-blue-900"></span>
-                                <h4 class="text-blue-900 text-lg font-bold">Archivos historicos de investigaciones</h4>
-                            </summary>
-                            <p class="text-gray-500 text-md px-15">Ofrecemos servicios de consultoría y asesoramiento
-                                para
-                                empresas
-                                que buscan
-                                mejorar su gestión y potenciar su crecimiento.
-                            </p>
-                        </details>
-                        <details class="flex flex-col border-t border-b border-gray-300 cursor-pointer">
-                            <summary class="flex gap-4 items-center  p-4">
-                                <span
-                                    class="icon-[material-symbols-light--business-center-outline-rounded] p-2 text-2xl text-blue-900"></span>
-                                <h4 class="text-blue-900 text-lg font-bold">Soporte las 24h</h4>
-                            </summary>
-                            <p class="text-gray-500 text-md px-15">Ofrecemos servicios de consultoría y asesoramiento
-                                para
-                                empresas
-                                que buscan
-                                mejorar su gestión y potenciar su crecimiento.
-                            </p>
-                        </details>
-                    </div>
-                    <div class="flex justify-center md:justify-start pt-4">
-                        <a class="inline-block bg-blue-900 text-white w-fit px-10 py-3 hover:bg-blue-800 transition"
-                            href="">Agenda una reunión</a>
-                    </div>
+                <div class="flex flex-col items-center text-center p-4">
+                    <span class="icon-[solar--calendar-outline] text-4xl text-red-500"></span>
+                    <h2 class="text-2xl">+200</h2>
+                    <p>Organizaciones acompañadas</p>
                 </div>
-            </div>
-
-        </section>
-        <section class="w-full mt-20 bg-[#015C89] h-full py-20 md:py-0 md:h-[80vh] ">
-            <div
-                class="flex  flex-col md:flex-row justify-center gap-10 items-center w-full md:max-w-7xl md:mx-auto h-full">
-                <div class="flex flex-col justify-center md:w-1/2 gap-4 p-4 lg:pl-10 ">
-                    <h2 class="text-4xl md:text-5xl  xl:text-6xl font-bold text-white">
-                        Espacio para titular referente a
-                        casos de éxito
-                    </h2>
-                    <p class="text-gray-200 text-lg">
-                        Más de 100 compañias confian en nosotros para ofrecer soluciones innovadoras que se adapten a
-                        sus necesidades.</p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href=""
-                            class="inline-block bg-transparent text-white border-2 border-white w-fit px-2 lg:px-4 py-3 hover:bg-white hover:text-blue-900 transition">Conoce
-                            mas</a>
-                        <a href=""
-                            class="inline-block bg-transparent text-white border-2 border-white w-fit px-2  py-3 hover:bg-white hover:text-blue-900 transition">Agenda
-                            una reunión</a>
-                    </div>
-                </div>
-                <div class="  w-full md:w-1/2 h-full ">
-                    <img src="assets/img/img-banner.png" class="w-full h-full object-cover" />
-
+                <div class="flex flex-col items-center text-center p-4">
+                    <span class="icon-[solar--calendar-outline] text-4xl text-red-500"></span>
+                    <h2 class="text-2xl">98%</h2>
+                    <p>Retención</p>
                 </div>
             </div>
         </section>

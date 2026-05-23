@@ -50,7 +50,8 @@
             </nav>
 
             <div class="lg:hidden flex justify-center items-center">
-                <button id="btn-menu"><span class="icon-[ph--list-light] text-4xl text-blue-900"></span></button>
+                <button class="cursor-pointer" id="btn-menu"><span
+                        class="icon-[ph--list-light] text-4xl text-blue-900"></span></button>
             </div>
         </div>
     </header>
@@ -83,7 +84,7 @@
                             una
                             reunion</a>
                         <a href=""
-                            class="inline-block bg-transparent text-sm border border-white text-blue-900 w-fit px-10 py-3 hover:bg-white/10 text-white transition rounded-full">Ver
+                            class="inline-block bg-transparent text-sm border-1 border-white w-fit px-10 py-3 hover:bg-white/10 text-white transition rounded-full">Ver
                             servicios</a>
                     </div>
                 </div>
@@ -137,7 +138,7 @@
                             <span
                                 class="icon-[material-symbols--target] text-3xl transition-colors duration-200 group-hover:text-white text-primary"></span>
                         </div>
-                        <h3 class="text-primary text-2xl font-bold font-primary">Estrategia</h3>
+                        <h3 class="text-primary text-xl font-bold font-primary">Estrategia</h3>
                         <p class="text-muted-foreground text-sm">Definimos rumbo claro alineando visión, propósito y
                             resultados
                             medibles.</p>
@@ -207,12 +208,10 @@
                             </p>
                         </li>
                         <li class="flex items-start gap-2">
-                            <span class="icon-[material-symbols--check-circle] text-primary text-xl"></span>
+                            <span class="icon-[material-symbols--check-circle] text-primary text-2xl sm:text-xl"></span>
                             <p class="text-muted-foreground text-sm">Acompañamiento continuo durante todo el proceso
-
                             </p>
                         </li>
-
                     </ul>
                     <div class="flex items-center justify-center gap-2 py-8  w-fit ">
                         <a href=""
@@ -227,23 +226,48 @@
                 </div>
             </div>
         </section>
+        <!-- Agenda una cita uwu-->
+        <section class="py-18 bg-linear-to-br from-[#071f44] to-[#1b5094]">
+            <div class="flex flex-col lg:flex-row gap-4">
+                <div class="text-center flex flex-col gap-4 p-6 justify-center items-center">
+                    <span class="icon-[lucide--sparkles] text-accent text-2xl"></span>
+                    <h2 class="text-background text-4xl   md:text-5xl font-primary">¿Listo para transformar
+                        tu
+                        organización?
+                    </h2>
+                    <p class="text-muted/80 text-sm">Agenda una sesión diagnóstica sin costo y descubre cómo
+                        podemos acompañarte a construir una organización saludable y de alto desempeño.
+                    </p>
+                    <a href=""
+                        class="text-primary my-5 bg-background px-8 py-4 rounded-full hover:-translate-y-0.5 hover:shadow-xl transition-all duration-200 font-semibold flex  items-center gap-2 text-sm">
+                        Comenzar ahora
+                        <span class="icon-[mdi--arrow-right]"></span>
+                    </a>
+
+
+                </div>
+            </div>
+        </section>
     </main>
     <!-- Footer -->
-    <footer class="bg-secondary py-12 full-width bg-cyan-50">
+    <footer class="bg-footer-dark-2 text-background py-12 full-width">
         <div
-            class="flex px-4 gap-4  md:px-6 xl:px-0 flex-col lg:flex-row justify-between items-center w-full max-w-6xl mx-auto">
+            class="flex px-4 gap-4 transition-all duration-500 md:px-6 xl:px-8 flex-col md:flex-row justify-between items-center w-full ">
             <div
-                class="flex flex-col items-center lg:items-start  w-full lg:w-1/3 mb-8 md:mb-0 text-center md:text-left">
-                <div class="font-headline-md text-headline-md font-bold text-on-secondary dark:text-primary-fixed mb-2">
+                class="flex flex-col sm-items-center lg:items-start w-full sm:w-sm  lg:w-1/2 mb-8 md:mb-0 text-left sm:text-center md:text-left">
+                <div class=" mb-2">
                     <a href="index.html">
-                        <img src="assets/img/logo-transparent.png" class="w-52 " alt="">
+                        <img src="assets/img/logo-transparent-white.png" class="w-52 " alt="">
                     </a>
                 </div>
-                <p class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed max-w-xs">
-                    © 2024 Factor IQ. Todos los derechos reservados.
+                <p class=" text-xs text-left max-w-xs lg:max-w-md">
+                    Acompañamiento estratégico para construir organizaciones saludables, donde el compromiso y el
+                    desempeño van de la mano.
+
                 </p>
             </div>
-            <div class="w-full lg:w-2/3 flex flex-col sm:flex-row flex-wrap justify-center gap-8 md:gap-12">
+            <div
+                class="w-full lg:w-2/3 flex flex-col sm:justify-center sm:flex-row flex-wrap md:justify-end lg:justify-evenly gap-8 md:gap-10 lg:gap-25">
                 <div class="flex flex-col gap-3">
                     <span class="text-lg font-bold text-primary dark:text-primary-fixed">Organización</span>
 
@@ -264,15 +288,23 @@
                         href="pages/contacto.html">Contáctanos</a>
                     <a class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed hover:underline transition-all opacity-80 hover:opacity-100"
                         href="./pages/contacto.html">FAQ</a>
-                </div>
-                <div class="flex flex-col gap-3">
                     <span class="font-bold text-lg text-primary dark:text-primary-fixed">Legal</span>
                     <a class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed hover:underline transition-all opacity-80 hover:opacity-100"
                         href="./pages/terminos.html">Términos y Condiciones</a>
                     <a class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed hover:underline transition-all opacity-80 hover:opacity-100"
                         href="./pages/politicas.html">Política de Privacidad</a>
                 </div>
+
             </div>
+        </div>
+        <div
+            class="text-center w-full flex flex-col md:flex-row md:justify-between md:items-center gap-2 pt-10 border-t mt-20 border-white/5">
+            <p class="text-sm text-white/50 px-4">
+                © 2026 Factor IQ. Todos los derechos reservados
+
+            </p>
+            <p class="text-sm text-white/50 px-4">
+                Acompañamiento Estratégico</p>
         </div>
     </footer>
     <script src="assets/js/menu.js"></script>

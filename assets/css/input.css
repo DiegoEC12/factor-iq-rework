@@ -34,6 +34,7 @@
     /* Bordes y divisores */
     --color-footer-dark: #0F1330;
     /* Fondo del footer */
+    --color-footer-dark-2: #020C22;
 
     /*shadowssowo*/
     --shadow-accent: 0px -10px 100px 0px rgba(214, 69, 44, 0.50);

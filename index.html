@@ -10,39 +10,39 @@
 </head>
 
 <body class="font-family">
-    <header class="bg-white shadow-md top-0 sticky z-50 border-blue-500">
-        <div class="flex justify-between items-center px-4 h-[12vh] max-w-7xl mx-auto z-50">
+    <header class="bg-white/80 backdrop-blur-sm w-full shadow-md top-0 fixed z-50 border-blue-500">
+        <div class="flex justify-between items-center px-4 h-[10vh] max-w-7xl mx-auto z-50">
             <div class="h-full py-4">
                 <a href="index.html">
                     <img class="h-full" src="assets/img/logo-transparent.png" alt="Logo">
                 </a>
             </div>
             <nav id="menu"
-                class="hidden z-10 flex-col absolute lg:relative top-[12vh] lg:top-0 left-0 lg:bg-transparent w-full h-screen lg:h-full bg-primary lg:flex lg:flex-row h-full">
+                class="hidden z-10 flex-col absolute lg:relative top-[10vh] lg:top-0 left-0 lg:bg-transparent w-full h-screen lg:h-full bg-primary lg:flex lg:flex-row h-full">
                 <ul class="flex flex-col justify-end lg:flex-row gap-4 w-full lg:py-0 py-4 items-center text-center">
                     <li class="lg:h-full h-20 w-full lg:w-auto flex items-center justify-center">
-                        <a class="cursor-pointer flex justify-center items-center w-full h-full lg:border-b-2 lg:border-blue-500 hover:bg-blue-800 lg:hover:bg-transparent lg:hover:text-blue-500 px-2 text-white lg:text-gray-500"
+                        <a class="cursor-pointer font-bold flex justify-center items-center w-full h-full lg:border-b-2 lg:border-blue-500 hover:bg-blue-800 lg:hover:bg-transparent lg:hover:text-blue-500 px-2 text-white lg:text-gray-500"
                             href="index.html">Inicio</a>
                     </li>
                     <li class="lg:h-full h-20 w-full lg:w-auto flex items-center justify-center">
-                        <a class="cursor-pointer flex justify-center items-center w-full h-full lg:border-b-2 lg:border-transparent hover:bg-blue-800 lg:hover:bg-transparent lg:hover:text-blue-500 px-2 text-white lg:text-gray-500"
+                        <a class="cursor-pointer font-bold flex justify-center items-center w-full h-full lg:border-b-2 lg:border-transparent hover:bg-blue-800 lg:hover:bg-transparent lg:hover:text-blue-500 px-2 text-white lg:text-gray-500"
                             href="pages/nosotros.html">Nosotros</a>
                     </li>
                     <li class="lg:h-full h-20 w-full lg:w-auto flex items-center justify-center">
-                        <a class="cursor-pointer flex justify-center items-center w-full h-full lg:border-b-2 lg:border-transparent hover:bg-blue-800 lg:hover:bg-transparent lg:hover:text-blue-500 px-2 text-white lg:text-gray-500"
+                        <a class="cursor-pointer font-bold flex justify-center items-center w-full h-full lg:border-b-2 lg:border-transparent hover:bg-blue-800 lg:hover:bg-transparent lg:hover:text-blue-500 px-2 text-white lg:text-gray-500"
                             href="pages/servicios.html">Servicios</a>
                     </li>
                     <li class="lg:h-full h-20 w-full lg:w-auto flex items-center justify-center">
-                        <a class="cursor-pointer flex justify-center items-center w-full h-full lg:border-b-2 lg:border-transparent hover:bg-blue-800 lg:hover:bg-transparent lg:hover:text-blue-500 px-2 text-white lg:text-gray-500"
+                        <a class="cursor-pointer font-bold flex justify-center items-center w-full h-full lg:border-b-2 lg:border-transparent hover:bg-blue-800 lg:hover:bg-transparent lg:hover:text-blue-500 px-2 text-white lg:text-gray-500"
                             href="pages/contacto.html">Contacto</a>
                     </li>
                     <li class="lg:h-full h-20 w-full lg:w-auto flex items-center justify-center">
-                        <a class="cursor-pointer flex justify-center items-center w-full h-full lg:border-b-2 lg:border-transparent hover:bg-blue-800 lg:hover:bg-transparent lg:hover:text-blue-500 px-2 text-white lg:text-gray-500"
+                        <a class="cursor-pointer font-bold flex justify-center items-center w-full h-full lg:border-b-2 lg:border-transparent hover:bg-blue-800 lg:hover:bg-transparent lg:hover:text-blue-500 px-2 text-white lg:text-gray-500"
                             href="pages/recursos_informaticos.html">Recursos
                             informáticos</a>
                     </li>
                     <li class="lg:h-full h-20 w-full lg:w-auto flex items-center justify-center">
-                        <a class="cursor-pointer flex justify-center items-center w-full h-full lg:border-b-2  lg:bg-primary lg:hover:bg-primary-glow  px-2 lg:h-fit lg:py-2 lg:px-4 lg:rounded-2xl lg:border-1 lg:border-white/10  text-white lg:text-white"
+                        <a class="cursor-pointer font-bold flex justify-center items-center w-full h-full lg:border-b-2  lg:bg-primary lg:hover:bg-primary-glow  px-2 lg:h-fit lg:py-2 lg:px-4 lg:rounded-2xl lg:border-1 lg:border-white/10  text-white lg:text-white"
                             href="pages/servicio_nube.html">Servicio
                             en la nube</a>
                     </li>
@@ -54,7 +54,7 @@
             </div>
         </div>
     </header>
-    <main>
+    <main class="pt-[10vh]">
         <!-- section Hero owo  -->
         <section
             class="flex relative  bg-repeat-no-repeat flex-col w-full lg:md:h-[90vh] bg-linear-to-br from-[#071f44] to-[#1b5094] py-0 md:py-4 ">
@@ -109,6 +109,121 @@
                     <span class="icon-[solar--calendar-outline] text-4xl text-red-500"></span>
                     <h2 class="text-2xl">98%</h2>
                     <p>Retención</p>
+                </div>
+            </div>
+        </section>
+        <!-- Sobre nosotros -->
+        <section class="bg-secondary py-25 ">
+            <div class="flex flex-col md:max-w-7xl mx-auto gap-8 justify-around w-full ">
+                <div class="flex flex-col gap-4 max-w-3xl mx-auto">
+                    <span class="uppercase text-xs tracking-widest text-center text-accent">Nuestros pilares
+                    </span>
+                    <h2 class="text-primary text-center px-8 font-primary text-4xl md:text-5xl ">
+                        Una
+                        metodología
+                        diseñada
+                        para
+                        perdurar
+                    </h2>
+                    <p class="text-center px-6 md:px-12 text-muted-foreground">
+                        Combinamos diagnóstico riguroso, intervención humana y herramientas digitales en la nube para
+                        que tu organización crezca con propósito. </p>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6 p-6">
+                    <div
+                        class="group cursor-pointer hover:scale-102 hover:shadow-xl transition-transform duration-300 flex flex-col gap-4 bg-background p-8 shadow-md rounded-xl">
+                        <div
+                            class="group-hover:bg-primary  w-12 h-12 bg-secondary rounded-xl flex items-center justify-center transition-colors duration-200">
+                            <span
+                                class="icon-[material-symbols--target] text-3xl transition-colors duration-200 group-hover:text-white text-primary"></span>
+                        </div>
+                        <h3 class="text-primary text-2xl font-bold font-primary">Estrategia</h3>
+                        <p class="text-muted-foreground text-sm">Definimos rumbo claro alineando visión, propósito y
+                            resultados
+                            medibles.</p>
+                    </div>
+                    <div
+                        class="group cursor-pointer hover:scale-102 hover:shadow-xl transition-transform duration-300 flex flex-col gap-4 bg-background p-8 shadow-md rounded-xl">
+                        <div
+                            class="group-hover:bg-primary  w-12 h-12 bg-secondary rounded-xl flex items-center justify-center transition-colors duration-200">
+                            <span
+                                class="icon-[material-symbols--groups] text-3xl transition-colors duration-200 group-hover:text-white text-primary"></span>
+                        </div>
+                        <h3 class="text-primary text-2xl font-bold font-primary">Cultura</h3>
+                        <p class="text-muted-foreground text-sm">Construimos entornos de confianza donde las personas
+                            dan lo mejor de sí.
+
+                        </p>
+                    </div>
+                    <div
+                        class="group cursor-pointer hover:scale-102 hover:shadow-xl transition-transform duration-300 flex flex-col gap-4 bg-background p-8 shadow-md rounded-xl">
+                        <div
+                            class="group-hover:bg-primary  w-12 h-12 bg-secondary rounded-xl flex items-center justify-center transition-colors duration-200">
+                            <span
+                                class="icon-[system-uicons--graph-bar] text-3xl transition-colors duration-200 group-hover:text-white text-primary"></span>
+                        </div>
+                        <h3 class="text-primary text-2xl font-bold font-primary">Desempeño</h3>
+                        <p class="text-muted-foreground text-sm">Diseñamos sistemas que convierten compromiso en
+                            resultados sostenibles.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Quienes somos -->
+        <section class="py-18">
+            <div class="flex flex-col lg:flex-row gap-4">
+                <div class="flex p-6 ">
+                    <img class="rounded-xl" src="assets/img/about.jpg" alt="">
+                </div>
+                <div class=" flex flex-col gap-4 p-6">
+                    <span class="text-accent font-secondary uppercase text-xs tracking-widest">Quiénes somos
+                    </span>
+                    <h2 class="text-primary text-4xl  md:text-5xl font-primary">Aliados estratégicos del crecimiento
+                        humano y
+                        organizacional.</h2>
+                    <p class="text-muted-foreground text-base">Somos una organización que a través del acompañamiento
+                        estratégico de nuestros clientes logramos
+                        que éstos sean organizaciones saludables, donde el compromiso y el desempeño van de la mano.
+
+                    </p>
+                    <ul class="flex flex-col gap-2">
+                        <li class="flex items-start gap-2">
+                            <span class="icon-[material-symbols--check-circle] text-primary text-xl"></span>
+                            <p class="text-muted-foreground text-sm">Diagnóstico organizacional integral
+                            </p>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="icon-[material-symbols--check-circle] text-primary text-xl"></span>
+                            <p class="text-muted-foreground text-sm">Planes de cultura y liderazgo a medida
+
+                            </p>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="icon-[material-symbols--check-circle] text-primary text-xl"></span>
+                            <p class="text-muted-foreground text-sm">Plataforma en la nube para medir el impacto
+
+                            </p>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="icon-[material-symbols--check-circle] text-primary text-xl"></span>
+                            <p class="text-muted-foreground text-sm">Acompañamiento continuo durante todo el proceso
+
+                            </p>
+                        </li>
+
+                    </ul>
+                    <div class="flex items-center justify-center gap-2 py-8  w-fit ">
+                        <a href=""
+                            class="text-primary hover:text-accent transition-all duration-200 font-semibold flex  items-center gap-2">Conoce
+                            nuestra
+                            historia
+                            <span class="icon-[mdi--arrow-right]"></span>
+                        </a>
+
+                    </div>
+
                 </div>
             </div>
         </section>

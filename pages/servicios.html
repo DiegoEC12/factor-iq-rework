@@ -10,25 +10,240 @@
 </head>
 
 <body class="font-family">
-    <main>
-        <!--pagina en construccion -->
-        <div class="flex items-center justify-center min-h-[90vh] bg-gray-100">
-            <div class="text-center p-4 md:p-0">
-                <h1 class="md:text-4xl text-2xl lg:text-6xl font-bold text-gray-800 mb-4">Página en Construcción</h1>
-                <p class="md:text-lg text-sm lg:text-xl text-gray-600 mb-8">¡Estamos trabajando en algo especial! Vuelve
-                    pronto para
-                    descubrirlo.</p>
-                <div>
-                    <img src="../assets/video/Work Create GIF by Pudgy Penguins.gif" alt=""
-                        class="h-48 w-auto mx-auto mt-8 rounded-full overflow-hidden">
-                </div>
+    <header class="bg-white/80 backdrop-blur-sm w-full shadow-md top-0 fixed z-50 border-blue-500">
+        <div class="flex justify-between items-center px-4 h-[10vh] max-w-7xl mx-auto z-50">
+            <div class="h-full py-4">
+                <a href="../index.html">
+                    <img class="h-full" src="../assets/img/logo-transparent.png" alt="Logo">
+                </a>
+            </div>
+            <nav id="menu"
+                class="hidden z-10 flex-col absolute lg:relative top-[10vh] lg:top-0 left-0 lg:bg-transparent w-full h-screen lg:h-full bg-primary lg:flex lg:flex-row h-full">
+                <ul class="flex flex-col justify-end lg:flex-row gap-4 w-full lg:py-0 py-4 items-center text-center">
+                    <li class="lg:h-full h-20 w-full lg:w-auto flex items-center justify-center">
+                        <a class="cursor-pointer font-bold flex justify-center items-center w-full h-full lg:border-b-2 lg:border-transparent hover:bg-blue-800 lg:hover:bg-transparent lg:hover:text-blue-500 px-2 text-white lg:text-gray-500"
+                            href="../index.html">Inicio</a>
+                    </li>
 
-                <div class="mt-8">
-                    <a href="../index.html" class="text-primary hover:underline font-medium">Volver al Inicio</a>
-                </div>
+                    <li class="lg:h-full h-20 w-full lg:w-auto flex items-center justify-center">
+                        <a class="cursor-pointer font-bold flex justify-center items-center w-full h-full lg:border-b-2 lg:border-blue-500 hover:bg-blue-800 lg:hover:bg-transparent lg:hover:text-blue-500 px-2 text-white lg:text-gray-500"
+                            href="servicios.html">Servicios</a>
+                    </li>
+                    <li class="lg:h-full h-20 w-full lg:w-auto flex items-center justify-center">
+                        <a class="cursor-pointer font-bold flex justify-center items-center w-full h-full lg:border-b-2 lg:border-transparent hover:bg-blue-800 lg:hover:bg-transparent lg:hover:text-blue-500 px-2 text-white lg:text-gray-500"
+                            href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="lg:h-full h-20 w-full lg:w-auto flex items-center justify-center">
+                        <a class="cursor-pointer font-bold flex justify-center items-center w-full h-full lg:border-b-2 lg:border-transparent hover:bg-blue-800 lg:hover:bg-transparent lg:hover:text-blue-500 px-2 text-white lg:text-gray-500"
+                            href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="lg:h-full h-20 w-full lg:w-auto flex items-center justify-center">
+                        <a class="cursor-pointer font-bold flex justify-center items-center w-full h-full lg:border-b-2 lg:border-transparent hover:bg-blue-800 lg:hover:bg-transparent lg:hover:text-blue-500 px-2 text-white lg:text-gray-500"
+                            href="recursos_informaticos.html">Recursos
+                            informáticos</a>
+                    </li>
+                    <li class="lg:h-full h-20 w-full lg:w-auto flex items-center justify-center">
+                        <a class="cursor-pointer font-bold flex justify-center items-center w-full h-full lg:border-b-2  lg:bg-primary lg:hover:bg-primary-glow  px-2 lg:h-fit lg:py-2 lg:px-4 lg:rounded-2xl lg:border-1 lg:border-white/10  text-white lg:text-white"
+                            href="servicio_nube.html">Servicio
+                            en la nube</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="lg:hidden flex justify-center items-center">
+                <button class="cursor-pointer" id="btn-menu"><span
+                        class="icon-[ph--list-light] text-4xl text-blue-900"></span></button>
             </div>
         </div>
+    </header>
+    <main class="pt-[10vh]">
+        <section class="py-20 bg-secondary">
+            <div class="flex flex-col gap-4 py-8 max-w-4xl mx-auto">
+                <div class="flex flex-col items-center text-center gap-4 px-6">
+                    <span class="text-accent uppercase tracking-widest text-sm">Servicios</span>
+                    <h1 class=" text-5xl font-primary md:text-6xl xl:text-7xl text-primary">Soluciones integrales para
+                        tu
+                        organización
+                    </h1>
+                    <p class="text-gray-500 py-4 text-lg">Cada engagement combina consultoría experta, herramientas en
+                        la
+                        nube y acompañamiento humano. Diseñamos rutas únicas para cada cliente.
+                    </p>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section class="py-20">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-center items-center p-4 gap-4 flex-wrap">
+                <div
+                    class="max-w-xs lg:max-w-sm group cursor-pointer border-1 border-gray-200 hover:shadow-xl transition-transform duration-300 flex flex-col gap-4 bg-background p-8 shadow-md rounded-xl">
+                    <div
+                        class="group-hover:bg-primary  w-12 h-12 bg-primary rounded-xl flex items-center justify-center transition-colors duration-200">
+                        <span
+                            class="icon-[mdi--compass-outline] text-3xl transition-colors duration-200 group-hover:text-background text-background"></span>
+                    </div>
+                    <h3 class="text-primary text-2xl font-bold font-primary">Planeación estratégica
+                    </h3>
+                    <p class="text-muted-foreground text-sm">Diseñamos un norte claro: visión, propósito, objetivos
+                        y KPIs para los próximos 3 años.
+
+                    </p>
+                </div>
+                <div
+                    class="max-w-xs lg:max-w-sm group cursor-pointer border-1 border-gray-200 hover:shadow-xl transition-transform duration-300 flex flex-col gap-4 bg-background p-8 shadow-md rounded-xl">
+                    <div
+                        class="group-hover:bg-primary  w-12 h-12 bg-primary rounded-xl flex items-center justify-center transition-colors duration-200">
+                        <span
+                            class="icon-[lucide--heart-handshake] text-3xl transition-colors duration-200 group-hover:text-background text-background"></span>
+                    </div>
+                    <h3 class="text-primary text-2xl font-bold font-primary">Cultura organizacional
+                    </h3>
+                    <p class="text-muted-foreground text-sm">Diagnóstico, propuesta de valor al colaborador y
+                        activación de comportamientos clave.
+                    </p>
+                </div>
+                <div
+                    class="max-w-xs lg:max-w-sm group cursor-pointer border-1 border-gray-200 hover:shadow-xl transition-transform duration-300 flex flex-col gap-4 bg-background p-8 shadow-md rounded-xl">
+                    <div
+                        class="group-hover:bg-primary  w-12 h-12 bg-primary rounded-xl flex items-center justify-center transition-colors duration-200">
+                        <span
+                            class="icon-[iconoir--brain] text-3xl transition-colors duration-200 group-hover:text-background text-background"></span>
+                    </div>
+                    <h3 class="text-primary text-2xl font-bold font-primary">Desarrollo de liderazgo
+
+                    </h3>
+                    <p class="text-muted-foreground text-sm">Programas a medida para líderes de equipo, mandos
+                        medios y comité directivo.
+                    </p>
+                </div>
+                <div
+                    class="max-w-xs lg:max-w-sm group cursor-pointer border-1 border-gray-200 hover:shadow-xl transition-transform duration-300 flex flex-col gap-4 bg-background p-8 shadow-md rounded-xl">
+                    <div
+                        class="group-hover:bg-primary  w-12 h-12 bg-primary rounded-xl flex items-center justify-center transition-colors duration-200">
+                        <span
+                            class="icon-[carbon--analytics] text-3xl transition-colors duration-200 group-hover:text-background text-background"></span>
+                    </div>
+                    <h3 class="text-primary text-2xl font-bold font-primary">Gestión del desempeño
+
+                    </h3>
+                    <p class="text-muted-foreground text-sm">Sistemas modernos de OKRs, feedback continuo y
+                        conversaciones de crecimiento.
+
+
+                    </p>
+                </div>
+                <div
+                    class="max-w-xs lg:max-w-sm group cursor-pointer border-1 border-gray-200 hover:shadow-xl transition-transform duration-300 flex flex-col gap-4 bg-background p-8 shadow-md rounded-xl">
+                    <div
+                        class="group-hover:bg-primary  w-12 h-12 bg-primary rounded-xl flex items-center justify-center transition-colors duration-200">
+                        <span
+                            class="icon-[tabler--rocket] text-3xl transition-colors duration-200 group-hover:text-background text-background"></span>
+                    </div>
+                    <h3 class="text-primary text-2xl font-bold font-primary">Transformación digital
+
+                    </h3>
+                    <p class="text-muted-foreground text-sm">Plataforma en la nube para medir clima, desempeño y
+                        evolución cultural en tiempo real.
+
+
+
+                    </p>
+                </div>
+                <div
+                    class="max-w-xs lg:max-w-sm group cursor-pointer border-1 border-gray-200 hover:shadow-xl transition-transform duration-300 flex flex-col gap-4 bg-background p-8 shadow-md rounded-xl">
+                    <div
+                        class="group-hover:bg-primary  w-12 h-12 bg-primary rounded-xl flex items-center justify-center transition-colors duration-200">
+                        <span
+                            class="icon-[uit--shield-check] text-3xl transition-colors duration-200 group-hover:text-background text-background"></span>
+                    </div>
+                    <h3 class="text-primary text-2xl font-bold font-primary">Bienestar y salud
+
+                    </h3>
+                    <p class="text-muted-foreground text-sm">Acompañamos la salud emocional y física de los equipos
+                        como ventaja competitiva.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="border-t-1 py-16 bg-secondary border-gray-200">
+            <div class="max-w-7xl mx-auto flex flex-col gap-4">
+                <div class="flex flex-col justify-center items-center gap-4 text-center p-8 max-w-7xl mx-auto">
+                    <h2 class="font-primary text-3xl md:text-4xl xl:text-5xl  text-primary">
+                        ¿No estás seguro por dónde empezar?
+                    </h2>
+                    <p class="max-w-2xl text-muted-foreground text-md">Diseñamos un diagnóstico inicial gratuito que nos
+                        permite
+                        proponerte una ruta clara y medible
+                        para tu organización.
+
+                    </p>
+                    <a href="contacto.html"
+                        class="my-4 w-fit text-sm bg-primary rounded-full px-6 py-3 text-background hover:text-accent transition-all duration-200 font-semibold flex  items-center gap-2">Hablemos
+                        <span class="icon-[mdi--arrow-right]"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class="bg-footer-dark-2 text-background py-12 full-width">
+            <div
+                class="flex px-4 gap-4 transition-all duration-500 md:px-6 xl:px-8 flex-col md:flex-row justify-between items-center w-full ">
+                <div
+                    class="flex flex-col sm-items-center lg:items-start w-full sm:w-sm  lg:w-1/2 mb-8 md:mb-0 text-left sm:text-center md:text-left">
+                    <div class=" mb-2">
+                        <a href="../index.html">
+                            <img src="../assets/img/logo-transparent-white.png" class="w-52 " alt="">
+                        </a>
+                    </div>
+                    <p class=" text-xs text-left max-w-xs lg:max-w-md">
+                        Acompañamiento estratégico para construir organizaciones saludables, donde el compromiso y el
+                        desempeño van de la mano.
+
+                    </p>
+                </div>
+                <div
+                    class="w-full lg:w-2/3 flex flex-col sm:justify-center sm:flex-row flex-wrap md:justify-end lg:justify-evenly gap-8 md:gap-10 lg:gap-25">
+                    <div class="flex flex-col gap-3">
+                        <span class="text-lg font-bold text-primary dark:text-primary-fixed">Organización</span>
+
+                        <a class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed hover:underline transition-all opacity-80 hover:opacity-100"
+                            href="nosotros.html">Nosotros</a>
+                        <a class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed hover:underline transition-all opacity-80 hover:opacity-100"
+                            href="servicios.html">Servicios </a>
+                        <a class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed hover:underline transition-all opacity-80 hover:opacity-100"
+                            href="contacto.html"> Contacto </a>
+                        <a class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed hover:underline transition-all opacity-80 hover:opacity-100"
+                            href="recursos_informaticos.html">Recursos informaticos</a>
+                        <a class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed hover:underline transition-all opacity-80 hover:opacity-100"
+                            href="servicio_nube.html">Servicio en la nube</a>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <span class="font-bold text-lg text-primary dark:text-primary-fixed">Soporte</span>
+                        <a class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed hover:underline transition-all opacity-80 hover:opacity-100"
+                            href="contacto.html">Contáctanos</a>
+                        <a class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed hover:underline transition-all opacity-80 hover:opacity-100"
+                            href="contacto.html">FAQ</a>
+                        <span class="font-bold text-lg text-primary dark:text-primary-fixed">Legal</span>
+                        <a class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed hover:underline transition-all opacity-80 hover:opacity-100"
+                            href="terminos.html">Términos y Condiciones</a>
+                        <a class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed hover:underline transition-all opacity-80 hover:opacity-100"
+                            href="politicas.html">Política de Privacidad</a>
+                    </div>
+
+                </div>
+            </div>
+            <div
+                class="text-center w-full flex flex-col md:flex-row md:justify-between md:items-center gap-2 pt-10 border-t mt-20 border-white/5">
+                <p class="text-sm text-white/50 px-4">
+                    © 2026 Factor IQ. Todos los derechos reservados
+
+                </p>
+                <p class="text-sm text-white/50 px-4">
+                    Acompañamiento Estratégico</p>
+            </div>
+        </footer>
     </main>
+
     <script src="../assets/js/menu.js"></script>
     <script src="../assets/js/animations.js"></script>
 </body>

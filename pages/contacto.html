@@ -37,11 +37,12 @@
                         <a class="cursor-pointer font-bold flex justify-center items-center w-full h-full lg:border-b-2 lg:border-blue-500 hover:bg-blue-800 lg:hover:bg-transparent lg:hover:text-blue-500 px-2 text-white lg:text-gray-500"
                             href="contacto.html">Contacto</a>
                     </li>
-                    <li class="lg:h-full h-20 w-full lg:w-auto flex items-center justify-center">
+
+                    <!--<li class="lg:h-full h-20 w-full lg:w-auto flex items-center justify-center">
                         <a class="cursor-pointer font-bold flex justify-center items-center w-full h-full lg:border-b-2 lg:border-transparent hover:bg-blue-800 lg:hover:bg-transparent lg:hover:text-blue-500 px-2 text-white lg:text-gray-500"
                             href="recursos_informaticos.html">Recursos
                             informáticos</a>
-                    </li>
+                    </li>-->
                     <li class="lg:h-full h-20 w-full lg:w-auto flex items-center justify-center">
                         <a class="cursor-pointer font-bold flex justify-center items-center w-full h-full lg:border-b-2  lg:bg-primary lg:hover:bg-primary-glow  px-2 lg:h-fit lg:py-2 lg:px-4 lg:rounded-2xl lg:border-1 lg:border-white/10  text-white lg:text-white"
                             href="servicio_nube.html">Servicio
@@ -71,7 +72,7 @@
             </div>
         </section>
 
-        <section class="py-15">
+        <section id="contacto" class="py-15">
             <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-4 ">
                 <div class="lg:max-w-2/5 flex flex-col gap-4 p-6 ">
                     <div class="">
@@ -147,34 +148,39 @@
                 </div>
 
                 <div class="md:p-8 border-1 border-gray-200 p-6 md:p-8 rounded-xl m-6 lg:w-1/2 lg:mx-auto">
-                    <form action="">
+                    <form action="post" id="formulario">
                         <div class=" flex flex-col flex-wrap gap-4">
                             <div class="flex flex-row flex-wrap gap-4">
                                 <div class="flex-1 flex flex-col gap-2">
                                     <label for="name" class="text-sm font-bold text-gray-500">Nombre</label>
-                                    <input type="text" id="name" class="border-2 border-gray-200 rounded-xl p-2">
+                                    <input name="nombres" type="text" id="name"
+                                        class="border-2 border-gray-200 rounded-xl p-2">
                                 </div>
                                 <div class="flex-1 flex flex-col gap-2">
                                     <label for="email" class="text-sm font-bold text-gray-500">Correo</label>
-                                    <input type="email" id="email" class="border-2 border-gray-200 rounded-xl p-2">
+                                    <input name="email" type="email" id="email"
+                                        class="border-2 border-gray-200 rounded-xl p-2">
                                 </div>
                             </div>
 
                             <div class="flex flex-row flex-wrap gap-4">
                                 <div class="flex-1 flex flex-col gap-2">
                                     <label for="phone" class="text-sm font-bold text-gray-500">Teléfono</label>
-                                    <input type="text" id="phone" class="border-2 border-gray-200 rounded-xl p-2">
+                                    <input name="telefono" type="text" id="phone"
+                                        class="border-2 border-gray-200 rounded-xl p-2">
                                 </div>
                                 <div class="flex-1 flex flex-col gap-2">
                                     <label for="company" class="text-sm font-bold text-gray-500">Empresa</label>
-                                    <input type="text" id="company" class="border-2 border-gray-200 rounded-xl p-2">
+                                    <input name="empresa" type="text" id="company"
+                                        class="border-2 border-gray-200 rounded-xl p-2">
                                 </div>
                             </div>
 
                             <div class="w-full flex flex-col gap-2">
                                 <label for="service" class="text-sm font-bold text-gray-500">¿Cómo podemos ayudarte?
                                 </label>
-                                <textarea class="resize-none h-24 border-2 border-gray-200 rounded-xl p-2"></textarea>
+                                <textarea name="mensaje"
+                                    class="resize-none h-24 border-2 border-gray-200 rounded-xl p-2"></textarea>
                             </div>
                             <div class="mt-5 flex flex-col w-full gap-2">
                                 <button type="submit"
@@ -190,8 +196,66 @@
 
             </div>
         </section>
+        <!-- Footer -->
+        <footer class="bg-footer-dark-2 text-background py-12 full-width">
+            <div
+                class="flex px-4 gap-4 transition-all duration-500 md:px-6 xl:px-8 flex-col md:flex-row justify-between items-center w-full ">
+                <div
+                    class="flex flex-col sm-items-center lg:items-start w-full sm:w-sm  lg:w-1/2 mb-8 md:mb-0 text-left sm:text-center md:text-left">
+                    <div class=" mb-2">
+                        <a href="../index.html">
+                            <img src="../assets/img/logo-transparent-white.png" class="w-52 " alt="">
+                        </a>
+                    </div>
+                    <p class=" text-xs text-left max-w-xs lg:max-w-md">
+                        Acompañamiento estratégico para construir organizaciones saludables, donde el compromiso y el
+                        desempeño van de la mano.
 
+                    </p>
+                </div>
+                <div
+                    class="w-full lg:w-2/3 flex flex-col sm:justify-center sm:flex-row flex-wrap md:justify-end lg:justify-evenly gap-8 md:gap-10 lg:gap-25">
+                    <div class="flex flex-col gap-3">
+                        <span class="text-lg font-bold text-primary dark:text-primary-fixed">Organización</span>
+
+                        <a class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed hover:underline transition-all opacity-80 hover:opacity-100"
+                            href="nosotros.html">Nosotros</a>
+                        <a class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed hover:underline transition-all opacity-80 hover:opacity-100"
+                            href="servicios.html">Servicios </a>
+                        <a class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed hover:underline transition-all opacity-80 hover:opacity-100"
+                            href="contacto.html"> Contacto </a>
+                        <a class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed hover:underline transition-all opacity-80 hover:opacity-100"
+                            href="recursos_informaticos.html">Recursos informaticos</a>
+                        <a class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed hover:underline transition-all opacity-80 hover:opacity-100"
+                            href="servicio_nube.html">Servicio en la nube</a>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <span class="font-bold text-lg text-primary dark:text-primary-fixed">Soporte</span>
+                        <a class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed hover:underline transition-all opacity-80 hover:opacity-100"
+                            href="contacto.html">Contáctanos</a>
+                        <a class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed hover:underline transition-all opacity-80 hover:opacity-100"
+                            href="contacto.html">FAQ</a>
+                        <span class="font-bold text-lg text-primary dark:text-primary-fixed">Legal</span>
+                        <a class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed hover:underline transition-all opacity-80 hover:opacity-100"
+                            href="terminos.html">Términos y Condiciones</a>
+                        <a class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed hover:underline transition-all opacity-80 hover:opacity-100"
+                            href="politicas.html">Política de Privacidad</a>
+                    </div>
+
+                </div>
+            </div>
+            <div
+                class="text-center w-full flex flex-col md:flex-row md:justify-between md:items-center gap-2 pt-10 border-t mt-20 border-white/5">
+                <p class="text-sm text-white/50 px-4">
+                    © 2026 Factor IQ. Todos los derechos reservados
+
+                </p>
+                <p class="text-sm text-white/50 px-4">
+                    Acompañamiento Estratégico</p>
+            </div>
+        </footer>
     </main>
+
     <script src="../assets/js/menu.js"></script>
     <script src="../assets/js/animations.js"></script>
 </body>

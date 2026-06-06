@@ -7,6 +7,25 @@
     <link href="../assets/css/output.css" rel="stylesheet">
     <link rel="shortcut icon" href="../assets/icon/Isotipo IQ.png" type="image/x-icon">
     <title>Contacto - Factor IQ</title>
+    <style>
+        /* Aquí sí puedes aplicar todo el CSS que quieras */
+        dialog {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            border-radius: 10px;
+            border: 2px solid #3498db;
+            padding: 20px;
+            font-family: Arial;
+        }
+
+        dialog::backdrop {
+            background: rgba(0, 0, 0, 0.5);
+            /* Oscurece el fondo */
+        }
+    </style>
 </head>
 
 <body class="font-family ">
@@ -59,8 +78,11 @@
     </header>
 
     <main class="pt-[10vh]">
-        <section class="bg-secondary py-15">
-            <div class="text-center px-6 py-10 md:px-8 lg:px-20 lg:py-28 max-w-4xl mx-auto flex flex-col gap-4">
+        <section class="bg-[url(../img/hero-contacto.webp)] bg-cover bg-top relative bg-no-repeat py-15">
+            <div class="bg-secondary absolute inset-0 opacity-70 z-1"></div>
+
+            </div>
+            <div class="relative z-2 px-6 py-10 md:px-8 lg:px-20 lg:py-28 max-w-4xl mx-auto flex flex-col gap-4">
                 <span class="text-accent uppercase tracking-widest text-sm">Contacto</span>
                 <h1 class="text-5xl md:text-6xl lg:text-6xl font-primary text-primary">Hablemos sobre tu organización
                 </h1>
@@ -148,17 +170,17 @@
                 </div>
 
                 <div class="md:p-8 border-1 border-gray-200 p-6 md:p-8 rounded-xl m-6 lg:w-1/2 lg:mx-auto">
-                    <form action="post" id="formulario">
+                    <form method="post" action="https://sheetdb.io/api/v1/c58g2kr6e72f0" id="formulario">
                         <div class=" flex flex-col flex-wrap gap-4">
                             <div class="flex flex-row flex-wrap gap-4">
                                 <div class="flex-1 flex flex-col gap-2">
                                     <label for="name" class="text-sm font-bold text-gray-500">Nombre</label>
-                                    <input name="nombres" type="text" id="name"
+                                    <input name="data[nombres]" type="text" id="name"
                                         class="border-2 border-gray-200 rounded-xl p-2">
                                 </div>
                                 <div class="flex-1 flex flex-col gap-2">
                                     <label for="email" class="text-sm font-bold text-gray-500">Correo</label>
-                                    <input name="email" type="email" id="email"
+                                    <input name="data[correo]" type="email" id="email"
                                         class="border-2 border-gray-200 rounded-xl p-2">
                                 </div>
                             </div>
@@ -166,12 +188,12 @@
                             <div class="flex flex-row flex-wrap gap-4">
                                 <div class="flex-1 flex flex-col gap-2">
                                     <label for="phone" class="text-sm font-bold text-gray-500">Teléfono</label>
-                                    <input name="telefono" type="text" id="phone"
+                                    <input name="data[telefono]" type="text" id="phone"
                                         class="border-2 border-gray-200 rounded-xl p-2">
                                 </div>
                                 <div class="flex-1 flex flex-col gap-2">
                                     <label for="company" class="text-sm font-bold text-gray-500">Empresa</label>
-                                    <input name="empresa" type="text" id="company"
+                                    <input name="data[empresa]" type="text" id="company"
                                         class="border-2 border-gray-200 rounded-xl p-2">
                                 </div>
                             </div>
@@ -179,7 +201,7 @@
                             <div class="w-full flex flex-col gap-2">
                                 <label for="service" class="text-sm font-bold text-gray-500">¿Cómo podemos ayudarte?
                                 </label>
-                                <textarea name="mensaje"
+                                <textarea name="data[mensaje]"
                                     class="resize-none h-24 border-2 border-gray-200 rounded-xl p-2"></textarea>
                             </div>
                             <div class="mt-5 flex flex-col w-full gap-2">
@@ -192,6 +214,7 @@
                         </div>
 
                     </form>
+
                 </div>
 
             </div>
@@ -224,8 +247,8 @@
                             href="servicios.html">Servicios </a>
                         <a class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed hover:underline transition-all opacity-80 hover:opacity-100"
                             href="contacto.html"> Contacto </a>
-                        <a class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed hover:underline transition-all opacity-80 hover:opacity-100"
-                            href="recursos_informaticos.html">Recursos informaticos</a>
+                        <!--<a class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed hover:underline transition-all opacity-80 hover:opacity-100"
+                            href="recursos_informaticos.html">Recursos informaticos</a>-->
                         <a class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed hover:underline transition-all opacity-80 hover:opacity-100"
                             href="servicio_nube.html">Servicio en la nube</a>
                     </div>
@@ -254,8 +277,29 @@
                     Acompañamiento Estratégico</p>
             </div>
         </footer>
+        <dialog id="miAlerta">
+            <p>Este es un mensaje personalizable</p>
+            <button onclick="window.miAlerta.close()">Cerrar</button>
+        </dialog>
     </main>
 
+    <script>
+        var form = document.getElementById('formulario');
+
+        form.addEventListener("submit", e => {
+            e.preventDefault();
+            fetch(form.action, {
+                method: "POST",
+                body: new FormData(document.getElementById("formulario")),
+            }).then(
+                response => response.json()
+            ).then((html) => {
+                // you can put any JS code here
+                document.getElementById('miAlerta').showModal();
+                form.reset();
+            });
+        });
+    </script>
     <script src="../assets/js/menu.js"></script>
     <script src="../assets/js/animations.js"></script>
 </body>

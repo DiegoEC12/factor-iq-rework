@@ -7,6 +7,25 @@
     <link rel="icon" type="image/x-icon" href="../assets/icon/Isotipo IQ.png">
     <link href="../assets/css/output.css" rel="stylesheet">
     <title>Pagina en Construccion - Factor IQ</title>
+    <style>
+        /* Aquí sí puedes aplicar todo el CSS que quieras */
+        dialog {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            border-radius: 10px;
+            border: 2px solid #3498db;
+            padding: 20px;
+            font-family: Arial;
+        }
+
+        dialog::backdrop {
+            background: rgba(0, 0, 0, 0.5);
+            /* Oscurece el fondo */
+        }
+    </style>
 </head>
 
 <body class="font-family">
@@ -28,7 +47,32 @@
                 </div>
             </div>
         </div>
+        <dialog id="miAlerta" class="relative p-4">
+            <p class="text-gray-800 p-4">
+                Se enviarion los datos correctamente, nos pondremos en contacto contigo lo antes posible, Gracias.
+            </p>
+            <button class="cursor-pointer hover:bg-red-600 absolute top-2 right-2 bg-red-500 text-xs w-6 h-6  text-white rounded" id="cerrarAlerta">X</button>
+        </dialog>
+        <button class="bg-blue-500 text-white py-2 px-4 rounded" id="btnMostrar">
+            Mostrar Alerta
+        </button>
     </main>
+
+    <script>
+        var btnMostrar = document.getElementById('btnMostrar');
+        btnMostrar.addEventListener('click', mostrarAlerta);
+        var btnCerrar = document.getElementById('cerrarAlerta');
+        btnCerrar.addEventListener('click', cerrarAlerta);
+        function mostrarAlerta() {
+            var openAlerta = document.getElementById('miAlerta');
+            openAlerta.showModal();
+        }
+        function cerrarAlerta() {
+            var closeAlerta = document.getElementById('miAlerta');
+            closeAlerta.close();
+        }
+    </script>
+    <script src="../assets/js/animations.js"></script>
 </body>
 
 </html>

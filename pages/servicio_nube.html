@@ -10,25 +10,183 @@
 </head>
 
 <body class="font-family">
-    <main>
-        <!--pagina en construccion -->
-        <div class="flex items-center justify-center min-h-[90vh] bg-gray-100">
-            <div class="text-center p-4 md:p-0">
-                <h1 class="md:text-4xl text-2xl lg:text-6xl font-bold text-gray-800 mb-4">Página en Construcción</h1>
-                <p class="md:text-lg text-sm lg:text-xl text-gray-600 mb-8">¡Estamos trabajando en algo especial! Vuelve
-                    pronto para
-                    descubrirlo.</p>
+    <header class="bg-white/80 backdrop-blur-sm w-full shadow-md top-0 fixed z-50 border-blue-500">
+        <div class="flex justify-between items-center px-4 h-[10vh] max-w-7xl mx-auto z-50">
+            <div class="h-full py-4">
+                <a href="../index.html">
+                    <img class="h-full" src="../assets/img/logo-transparent.png" alt="Logo">
+                </a>
+            </div>
+            <nav id="menu"
+                class="hidden z-10 flex-col absolute lg:relative top-[10vh] lg:top-0 left-0 lg:bg-transparent w-full h-screen lg:h-full bg-primary lg:flex lg:flex-row h-full">
+                <ul class="flex flex-col justify-end lg:flex-row gap-4 w-full lg:py-0 py-4 items-center text-center">
+                    <li class="lg:h-full h-20 w-full lg:w-auto flex items-center justify-center">
+                        <a class="cursor-pointer font-bold flex justify-center items-center w-full h-full lg:border-b-2 lg:border-transparent hover:bg-blue-800 lg:hover:bg-transparent lg:hover:text-blue-500 px-2 text-white lg:text-gray-500"
+                            href="../index.html">Inicio</a>
+                    </li>
+
+                    <li class="lg:h-full h-20 w-full lg:w-auto flex items-center justify-center">
+                        <a class="cursor-pointer font-bold flex justify-center items-center w-full h-full lg:border-b-2 lg:border-transparent hover:bg-blue-800 lg:hover:bg-transparent lg:hover:text-blue-500 px-2 text-white lg:text-gray-500"
+                            href="servicios.html">Servicios</a>
+                    </li>
+                    <li class="lg:h-full h-20 w-full lg:w-auto flex items-center justify-center">
+                        <a class="cursor-pointer font-bold flex justify-center items-center w-full h-full lg:border-b-2 lg:border-transparent hover:bg-blue-800 lg:hover:bg-transparent lg:hover:text-blue-500 px-2 text-white lg:text-gray-500"
+                            href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="lg:h-full h-20 w-full lg:w-auto flex items-center justify-center">
+                        <a class="cursor-pointer font-bold flex justify-center items-center w-full h-full lg:border-b-2 lg:border-transparent hover:bg-blue-800 lg:hover:bg-transparent lg:hover:text-blue-500 px-2 text-white lg:text-gray-500"
+                            href="contacto.html">Contacto</a>
+                    </li>
+                    <!--<li class="lg:h-full h-20 w-full lg:w-auto flex items-center justify-center">
+                        <a class="cursor-pointer font-bold flex justify-center items-center w-full h-full lg:border-b-2 lg:border-transparent hover:bg-blue-800 lg:hover:bg-transparent lg:hover:text-blue-500 px-2 text-white lg:text-gray-500"
+                            href="recursos_informaticos.html">Recursos
+                            informáticos</a>
+                    </li>-->
+                    <li class="lg:h-full h-20 w-full lg:w-auto flex items-center justify-center">
+                        <a class="cursor-pointer font-bold flex justify-center items-center w-full h-full  lg:border-b-2  lg:bg-primary lg:hover:bg-primary-glow  px-2 lg:h-fit lg:py-2 lg:px-4 lg:rounded-2xl lg:border-1 lg:border-blue-500  text-white lg:text-white"
+                            href="servicio_nube.html">Servicio
+                            en la nube</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="lg:hidden flex justify-center items-center">
+                <button class="cursor-pointer" id="btn-menu"><span
+                        class="icon-[ph--list-light] text-4xl text-blue-900"></span></button>
+            </div>
+        </div>
+    </header>
+    <main class="min-h-screen flex items-stretch bg-primary">
+
+        <!-- Columna Visual (Fondo Azul Institucional) -->
+        <div
+            class="hidden lg:flex lg:w-5/12 bg-primary relative overflow-hidden flex-col justify-between p-16 animate-on-scroll">
+
+            <div class="relative z-10">
+                <div class="mb-12 mt-20">
+                    <a class="flex w-fit" href="index.html">
+                        <img class="w-50" src="../assets/img/logo-transparent-white.png" alt="Logo IBP"
+                            class="h-10 w-auto text-white"
+                            onerror="this.outerHTML='<div class=\'text-white font-extrabold text-2xl tracking-tighter italic\'>Factor IQ</div>'" />
+                    </a>
+                </div>
+                <h1
+                    class="text-white text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-6 drop-shadow-md uppercase border-l-4 border-red-500 pl-4">
+                    Servicio en la nube <br />Para <br /> tu negocio
+                </h1>
+
+            </div>
+
+            <!-- Imagen de fondo con overlay (Placeholder si falta) -->
+            <div class="absolute inset-0 opacity-20 pointer-events-none mix-blend-overlay bg-slate-800">
+                <img alt="Estudiantes IBP" class="w-full h-full object-cover" src="../assets/img/hero.jpg" />
+            </div>
+
+            <!-- Accesorio Flotante inferior 
+            <div
+                class="relative z-10 glass-panel p-4 rounded-2xl border border-white/40 flex items-center space-x-4 max-w-xs shadow-2xl">
+                <div class="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center text-white shadow-lg">
+                    <span class="icon-[material-symbols--verified-user] text-4xl"></span>
+                </div>
                 <div>
-                    <img src="../assets/video/Work Create GIF by Pudgy Penguins.gif" alt=""
-                        class="h-48 w-auto mx-auto mt-8 rounded-full overflow-hidden">
+                    <p class="text-[10px] uppercase tracking-tighter text-white font-bold leading-none mb-1">Acceso
+                        Seguro</p>
+                    <p class="text-xs font-bold text-white tracking-tight">Cifrado de grado institucional</p>
+                </div>
+            </div>-->
+        </div>
+
+        <!-- Columna del Formulario -->
+        <div
+            class="w-full lg:w-7/12 bg-primary/50 lg:bg-white flex flex-col justify-center px-6 py-12 md:px-16 lg:px-24 animate-on-scroll">
+            <div class="max-w-md mx-auto w-full ">
+
+                <!-- Logo Mobile -->
+                <div class="lg:hidden flex justify-center mb-12">
+                    <a href="index.html">
+                        <img src="assets/img/logo.png" alt="Logo IBP" class="h-12 w-auto"
+                            onerror="this.outerHTML='<div class=\'text-primary font-extrabold text-3xl tracking-tighter\'> BUP </div>'" />
+                    </a>
                 </div>
 
-                <div class="mt-8">
-                    <a href="../index.html" class="text-primary hover:underline font-medium">Volver al Inicio</a>
+                <div class="mb-10 mt-20">
+                    <h2 class="text-3xl font-extrabold text-white lg:text-slate-900 tracking-tight mb-2">Iniciar Sesión
+                    </h2>
+                    <p class="text-slate-100 lg:text-slate-500 font-medium">Bienvenido de nuevo. Por favor ingresa tus
+                        credenciales.</p>
+                </div>
+
+                <form class="space-y-6" action="auth/login_process.php" method="POST">
+                    <!-- Identidad -->
+                    <div class="group">
+                        <label
+                            class="block text-xs font-bold text-white lg:text-primary uppercase tracking-widest mb-3 ml-1">Usuario
+                            (Correo o DNI)</label>
+                        <div class="relative">
+                            <div
+                                class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400 group-focus-within:text-primary transition-colors">
+                                <span class="icon-[material-symbols--person]"></span>
+                            </div>
+                            <input
+                                class="w-full bg-slate-50 border border-slate-200 rounded-2xl py-4 pl-12 pr-4 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none"
+                                placeholder="Ingresa tu correo o DNI" required type="text" name="usuario" />
+                        </div>
+                    </div>
+
+                    <!-- Password -->
+                    <div class="group">
+                        <div class="flex justify-between items-center mb-3 px-1">
+                            <label
+                                class="block text-xs font-bold text-white lg:text-primary uppercase tracking-widest">Contraseña</label>
+                            <!--<a class="text-xs font-bold text-white lg:text-accent lg:hover:text-red-500 lg:hover:underline hover:text-white hover:underline transition-colors"
+                                href="forgot-password.html">¿Olvidaste tu contraseña?</a>-->
+                        </div>
+                        <div class="relative">
+                            <div
+                                class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400 group-focus-within:text-primary transition-colors">
+                                <span class="icon-[material-symbols--lock]"></span>
+                            </div>
+                            <input
+                                class="w-full bg-slate-50 border border-slate-200 rounded-2xl py-4 pl-12 pr-4 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none"
+                                placeholder="••••••••" required type="password" name="password" />
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="pt-4">
+                        <button
+                            class="w-full lg:bg-[linear-gradient(135deg,#1B2447_0%,#3D5BB8_100%)] lg:hover:bg-primary lg:hover:text-white text-white py-4 rounded-full font-bold text-base tracking-wide shadow-sm shadow-white lg:shadow-lg lg:shadow-blue-500/30 hover:scale-[1.02] active:scale-[0.98] transition-all flex justify-center items-center gap-2 cursor-pointer"
+                            type="submit">
+                            Ingresar
+                            <span class="icon-[material-symbols--login] text-lg"></span>
+                        </button>
+                    </div>
+                </form>
+
+                <div class="mt-8 text-center">
+                    <p class="text-white lg:text-slate-500 text-sm">
+                        Aun no eres un cliente
+                        <a class="text-white lg:text-accent font-extrabold hover:text-secondary lg:hover:text-red-600 hover:underline ml-1 transition-colors"
+                            href="register.html">
+                            Solicita una demo
+                        </a>
+                    </p>
+                </div>
+
+                <!-- Footer Legal -->
+                <div
+                    class="mt-15 pt-8 border-t border-slate-100 flex flex-col sm:flex-row justify-between items-center text-[10px] font-bold uppercase tracking-widest text-white lg:text-slate-400 gap-4">
+                    <p>© 2026 Factor IQ</p>
+                    <div class="flex space-x-6">
+                        <a class="hover:text-primary transition-colors font-extrabold" href="#">Ayuda</a>
+                        <a class="hover:text-primary transition-colors font-extrabold" href="#">Privacidad</a>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
     <script src="../assets/js/menu.js"></script>
     <script src="../assets/js/animations.js"></script>
-</body></html>
+</body>
+
+</html>

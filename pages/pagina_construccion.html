@@ -7,25 +7,6 @@
     <link rel="icon" type="image/x-icon" href="../assets/icon/Isotipo IQ.png">
     <link href="../assets/css/output.css" rel="stylesheet">
     <title>Pagina en Construccion - Factor IQ</title>
-    <style>
-        /* Aquí sí puedes aplicar todo el CSS que quieras */
-        dialog {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: white;
-            border-radius: 10px;
-            border: 2px solid #3498db;
-            padding: 20px;
-            font-family: Arial;
-        }
-
-        dialog::backdrop {
-            background: rgba(0, 0, 0, 0.5);
-            /* Oscurece el fondo */
-        }
-    </style>
 </head>
 
 <body class="font-family">
@@ -47,30 +28,105 @@
                 </div>
             </div>
         </div>
-        <dialog id="miAlerta" class="relative p-4">
-            <p class="text-gray-800 p-4">
+
+        <dialog id="miAlerta"
+            class=" absolute p-4 bg-green-600/40 backdrop-blur-sm rounded-lg shadow-lg border-1 border-green-900 bottom-0 left-0">
+            <p class="text-white p-4">
                 Se enviarion los datos correctamente, nos pondremos en contacto contigo lo antes posible, Gracias.
             </p>
-            <button class="cursor-pointer hover:bg-red-600 absolute top-2 right-2 bg-red-500 text-xs w-6 h-6  text-white rounded" id="cerrarAlerta">X</button>
+            <button
+                class="cursor-pointer hover:bg-red-600 absolute top-2 right-2 bg-red-500 text-xs w-6 h-6  text-white rounded"
+                id="cerrarAlerta">X</button>
         </dialog>
         <button class="bg-blue-500 text-white py-2 px-4 rounded" id="btnMostrar">
             Mostrar Alerta
         </button>
-    </main>
+        <dialog id="myDialog" class="opacity-0 scale-95 transition-[opacity,transform,display,overlay] duration-300 allow-discrete
+         open:opacity-100 open:scale-100 
+         starting:open:opacity-0 starting:open:scale-95
+         backdrop:bg-black/0 backdrop:transition-[background-color,display,overlay] backdrop:duration-300 backdrop:allow-discrete
+         open:backdrop:bg-black/50
+         starting:open:backdrop:bg-black/0
+         p-6 rounded-2xl shadow-2xl bg-white max-w-md w-full">
 
+            <h3 class="text-lg font-bold text-gray-900">¡Hola desde Tailwind!</h3>
+            <p class="py-4 text-gray-600">Este diálogo nativo se abre y se cierra con transiciones fluidas.</p>
+
+            <form method="dialog" class="text-right">
+                <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700">
+                    Cerrar
+                </button>
+            </form>
+        </dialog>
+
+        <!-- Botón para abrir -->
+        <button id="openModal" class="bg-black text-white px-4 py-2 rounded">
+            Abrir Modal
+        </button>
+
+        <!-- Componente de Alerta -->
+        <dialog id="successAlert" class="fixed top-5 right-5 m-0 flex items-center gap-3 bg-emerald-500 text-white px-5 py-3 rounded-xl shadow-lg border-0
+         opacity-0 translate-y-[-20px] transition-[opacity,transform,display,overlay] duration-500 allow-discrete
+         open:opacity-100 open:translate-y-0
+         starting:open:opacity-0 starting:open:translate-y-[-20px]">
+
+            <!-- Icono de Éxito (Check) -->
+            <svg class="w-6 h-6 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            </svg>
+
+            <!-- Texto -->
+            <span class="font-medium text-sm">¡Operación completada con éxito!</span>
+        </dialog>
+
+        <!-- Botón de prueba -->
+        <button onclick="triggerAlert()"
+            class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg font-medium shadow">
+            Simular Éxito
+        </button>
+    </main>
+    <script>
+        function triggerAlert() {
+            const alert = document.getElementById('successAlert');
+
+            // 1. Abrimos con .show() para que NO bloquee la pantalla (no es un modal rígido)
+            alert.show();
+
+            // 2. Esperamos 3 segundos antes de iniciar el cierre
+            setTimeout(() => {
+                alert.close();
+            }, 3000);
+        }
+    </script>
     <script>
         var btnMostrar = document.getElementById('btnMostrar');
         btnMostrar.addEventListener('click', mostrarAlerta);
         var btnCerrar = document.getElementById('cerrarAlerta');
         btnCerrar.addEventListener('click', cerrarAlerta);
+        var openModal = document.getElementById('openModal');
+        var myDialog = document.getElementById('myDialog');
+        openModal.addEventListener('click', function () {
+            myDialog.showModal();
+            setTimeout(() => {
+                myDialog.close();
+            }, 2800);
+
+        });
+
         function mostrarAlerta() {
             var openAlerta = document.getElementById('miAlerta');
             openAlerta.showModal();
+            setTimeout(() => {
+                openAlerta.close();
+            }, 2800);
+
         }
-        function cerrarAlerta() {
+
+        /*function cerrarAlerta() {
             var closeAlerta = document.getElementById('miAlerta');
             closeAlerta.close();
-        }
+        }*/
     </script>
     <script src="../assets/js/animations.js"></script>
 </body>

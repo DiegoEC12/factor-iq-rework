@@ -7,25 +7,7 @@
     <link href="../assets/css/output.css" rel="stylesheet">
     <link rel="shortcut icon" href="../assets/icon/Isotipo IQ.png" type="image/x-icon">
     <title>Contacto - Factor IQ</title>
-    <style>
-        /* Aquí sí puedes aplicar todo el CSS que quieras */
-        dialog {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: white;
-            border-radius: 10px;
-            border: 2px solid #3498db;
-            padding: 20px;
-            font-family: Arial;
-        }
 
-        dialog::backdrop {
-            background: rgba(0, 0, 0, 0.5);
-            /* Oscurece el fondo */
-        }
-    </style>
 </head>
 
 <body class="font-family ">
@@ -277,14 +259,27 @@
                     Acompañamiento Estratégico</p>
             </div>
         </footer>
-        <dialog id="miAlerta">
-            <p>Este es un mensaje personalizable</p>
-            <button onclick="window.miAlerta.close()">Cerrar</button>
+        <!-- Componente de Alerta -->
+        <dialog id="successAlert" class="absolute bottom-5 left-5 m-0 flex items-center gap-3 bg-emerald-500 text-white px-5 py-3 rounded-xl shadow-lg border-0
+         opacity-0 translate-y-[-20px] transition-[opacity,transform,display,overlay] duration-500 allow-discrete
+         open:opacity-100 open:translate-y-0
+         starting:open:opacity-0 starting:open:translate-y-[-20px]">
+            <!-- Icono de Éxito (Check) -->
+            <svg class="w-6 h-6 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            </svg>
+            <!-- Texto -->
+            <span class="font-medium text-sm">¡Operación completada con éxito!</span>
         </dialog>
     </main>
-
     <script>
+
+    </script>
+    <script>
+
         var form = document.getElementById('formulario');
+        const alerta = document.getElementById('successAlert');
 
         form.addEventListener("submit", e => {
             e.preventDefault();
@@ -294,11 +289,18 @@
             }).then(
                 response => response.json()
             ).then((html) => {
-                // you can put any JS code here
-                document.getElementById('miAlerta').showModal();
                 form.reset();
+                triggerAlert();
             });
         });
+        function triggerAlerta() {
+            // 1. Abrimos con .show() para que NO bloquee la pantalla (no es un modal rígido)
+            alerta.show();
+            // 2. Esperamos 3 segundos antes de iniciar el cierre
+            setTimeout(() => {
+                alerta.close();
+            }, 3000);
+        }
     </script>
     <script src="../assets/js/menu.js"></script>
     <script src="../assets/js/animations.js"></script>

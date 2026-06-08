@@ -60,15 +60,15 @@
     </header>
 
     <main class="pt-[10vh]">
-        <section class="bg-[url(../img/hero-contacto.webp)] bg-cover bg-top relative bg-no-repeat py-15">
+        <section class="h-[90vh] flex flex-col items-center select-none bg-[url(../img/hero-contacto.webp)] bg-cover bg-top relative bg-no-repeat py-15">
             <div class="bg-secondary absolute inset-0 opacity-70 z-1"></div>
 
             </div>
-            <div class="relative z-2 px-6 py-10 md:px-8 lg:px-20 lg:py-28 max-w-4xl mx-auto flex flex-col gap-4">
-                <span class="text-accent uppercase tracking-widest text-sm">Contacto</span>
-                <h1 class="text-5xl md:text-6xl lg:text-6xl font-primary text-primary">Hablemos sobre tu organización
+            <div class="transition-all h-full justify-center relative z-2 px-4 py-10 md:px-8 lg:px-20 lg:py-28 max-w-4xl mx-auto flex flex-col gap-4">
+                <span class="text-accent font-semibold uppercase tracking-widest text-sm xl:text-base">Contacto</span>
+                <h1 class="text-5xl md:font-semibold md:text-6xl  xl:text-7xl xl:font-bold font-primary text-primary">Hablemos sobre tu organización
                 </h1>
-                <p class="text-gray-500 py-4 text-lg">Cuéntanos en qué momento se encuentra tu empresa. Te respondemos
+                <p class="xl:text-lg text-gray-500 font-semibold py-4 text-lg">Cuéntanos en qué momento se encuentra tu empresa. Te respondemos
                     en
                     menos de 24 horas
                     hábiles.
@@ -79,7 +79,7 @@
         <section id="contacto" class="py-15">
             <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-4 ">
                 <div class="lg:max-w-2/5 flex flex-col gap-4 p-6 ">
-                    <div class="">
+                    <div class="select-none">
                         <h3 class="text-primary text-2xl font-bold font-primary">Información
                         </h3>
                         <p class="text-muted-foreground text-sm">También puedes escribirnos directamente por cualquiera
@@ -88,7 +88,7 @@
                     </div>
                     <div class="max-w-7xl flex flex-col md:flex-row justify-center items-center gap-6 flex-wrap">
                         <div
-                            class=" w-full lg:max-w-xl group cursor-pointer border-1 border-gray-200 transition-transform duration-300 flex gap-4 bg-background p-4 rounded-xl hover:border-accent/50">
+                            class="select-none w-full lg:max-w-xl group cursor-pointer border-1 border-gray-200 transition-transform duration-300 flex gap-4 bg-background p-4 rounded-xl hover:border-accent/50">
                             <div
                                 class="  w-12 h-12 bg-secondary rounded-xl flex items-center justify-center transition-colors duration-200">
                                 <span
@@ -103,7 +103,7 @@
                             </div>
                         </div>
                         <div
-                            class=" w-full lg:max-w-xl group cursor-pointer border-1 border-gray-200 transition-transform duration-300 flex gap-4 bg-background p-4 rounded-xl hover:border-accent/50">
+                            class="select-none w-full lg:max-w-xl group cursor-pointer border-1 border-gray-200 transition-transform duration-300 flex gap-4 bg-background p-4 rounded-xl hover:border-accent/50">
                             <div
                                 class="  w-12 h-12 bg-secondary rounded-xl flex items-center justify-center transition-colors duration-200">
                                 <span
@@ -118,7 +118,7 @@
                             </div>
                         </div>
                         <div
-                            class=" w-full lg:max-w-xl group cursor-pointer border-1 border-gray-200 transition-transform duration-300 flex gap-4 bg-background p-4 rounded-xl hover:border-accent/50">
+                            class="select-none w-full lg:max-w-xl group cursor-pointer border-1 border-gray-200 transition-transform duration-300 flex gap-4 bg-background p-4 rounded-xl hover:border-accent/50">
                             <div
                                 class="  w-12 h-12 bg-secondary rounded-xl flex items-center justify-center transition-colors duration-200">
                                 <span
@@ -133,7 +133,7 @@
                             </div>
                         </div>
                         <div
-                            class=" w-full lg:max-w-xl group cursor-pointer border-1 border-gray-200 transition-transform duration-300 flex gap-4 bg-background p-4 rounded-xl hover:border-accent/50">
+                            class="select-none w-full lg:max-w-xl group cursor-pointer border-1 border-gray-200 transition-transform duration-300 flex gap-4 bg-background p-4 rounded-xl hover:border-accent/50">
                             <div
                                 class="  w-12 h-12 bg-secondary rounded-xl flex items-center justify-center transition-colors duration-200">
                                 <span
@@ -151,7 +151,7 @@
 
                 </div>
 
-                <div class="md:p-8 border-1 border-gray-200 p-6 md:p-8 rounded-xl m-6 lg:w-1/2 lg:mx-auto">
+                <div class="select-none md:p-8 border-1 border-gray-200 p-6 md:p-8 rounded-xl m-6 lg:w-1/2 lg:mx-auto">
                     <form method="post" action="https://sheetdb.io/api/v1/c58g2kr6e72f0" id="formulario">
                         <div class=" flex flex-col flex-wrap gap-4">
                             <div class="flex flex-row flex-wrap gap-4">
@@ -188,7 +188,7 @@
                             </div>
                             <div class="mt-5 flex flex-col w-full gap-2">
                                 <button type="submit"
-                                    class="flex justify-center items-center text-xs gap-2 cursor-pointer border-2 border-gray-200 rounded-full p-3 bg-primary text-background font-bold">Enviar
+                                    class="hover:bg-blue-950/90 transition-colors duration-300 flex justify-center items-center text-xs gap-2 cursor-pointer border-2 border-gray-200 rounded-full p-3 bg-primary text-background font-bold">Enviar
                                     mensaje
                                     <span class="icon-[streamline--mail-send-email-message-remix]"></span>
                                 </button>
@@ -260,24 +260,20 @@
             </div>
         </footer>
         <!-- Componente de Alerta -->
-        <dialog id="successAlert" class="absolute bottom-5 left-5 m-0 flex items-center gap-3 bg-emerald-500 text-white px-5 py-3 rounded-xl shadow-lg border-0
+        <dialog id="successAlert" class="fixed flex bottom-0 left-0 m-4 items-center gap-3 bg-emerald-500 text-white px-5 py-3 rounded-xl shadow-lg border-0
          opacity-0 translate-y-[-20px] transition-[opacity,transform,display,overlay] duration-500 allow-discrete
          open:opacity-100 open:translate-y-0
          starting:open:opacity-0 starting:open:translate-y-[-20px]">
-            <!-- Icono de Éxito (Check) -->
-            <svg class="w-6 h-6 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-            </svg>
+
+            <span class="icon-[material-symbols--check-circle] text-xl"></span>
             <!-- Texto -->
-            <span class="font-medium text-sm">¡Operación completada con éxito!</span>
+            <span class="font-medium text-sm">Mensaje enviado con éxito, nos estaremos comunicando contigo pronto.</span>
         </dialog>
     </main>
     <script>
 
     </script>
     <script>
-
         var form = document.getElementById('formulario');
         const alerta = document.getElementById('successAlert');
 
@@ -289,13 +285,13 @@
             }).then(
                 response => response.json()
             ).then((html) => {
-                form.reset();
                 triggerAlert();
             });
         });
-        function triggerAlerta() {
+        function triggerAlert() {
             // 1. Abrimos con .show() para que NO bloquee la pantalla (no es un modal rígido)
             alerta.show();
+            form.reset();
             // 2. Esperamos 3 segundos antes de iniciar el cierre
             setTimeout(() => {
                 alerta.close();

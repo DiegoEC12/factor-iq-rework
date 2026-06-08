@@ -60,12 +60,12 @@
 
         <!-- Columna Visual (Fondo Azul Institucional) -->
         <div
-            class="hidden lg:flex lg:w-5/12 bg-primary relative overflow-hidden flex-col justify-between p-16 animate-on-scroll">
+            class="hidden select-none lg:flex lg:w-5/12 bg-primary relative overflow-hidden flex-col justify-between p-16 animate-on-scroll">
 
             <div class="relative z-10">
-                <div class="mb-12 mt-20">
-                    <a class="flex w-fit" href="index.html">
-                        <img class="w-50" src="../assets/img/logo-transparent-white.png" alt="Logo IBP"
+                <div class=" mb-12 mt-20">
+                    <a class=" flex w-fit">
+                        <img class=" w-50" src="../assets/img/logo-transparent-white.png" alt="Logo IBP"
                             class="h-10 w-auto text-white"
                             onerror="this.outerHTML='<div class=\'text-white font-extrabold text-2xl tracking-tighter italic\'>Factor IQ</div>'" />
                     </a>
@@ -98,7 +98,7 @@
 
         <!-- Columna del Formulario -->
         <div
-            class="w-full lg:w-7/12 bg-primary/50 lg:bg-white flex flex-col justify-center px-6 py-12 md:px-16 lg:px-24 animate-on-scroll">
+            class="select-none w-full lg:w-7/12 bg-primary/50 lg:bg-white flex flex-col justify-center px-6 py-12 md:px-16 lg:px-24 animate-on-scroll">
             <div class="max-w-md mx-auto w-full ">
 
                 <!-- Logo Mobile -->
@@ -116,7 +116,7 @@
                         credenciales.</p>
                 </div>
 
-                <form class="space-y-6" action="auth/login_process.php" method="POST">
+                <form id="formLogin" class="space-y-6" action="" method="POST">
                     <!-- Identidad -->
                     <div class="group">
                         <label
@@ -154,7 +154,7 @@
 
                     <!-- Submit Button -->
                     <div class="pt-4">
-                        <button
+                        <button id="btnLogin"
                             class="w-full lg:bg-[linear-gradient(135deg,#1B2447_0%,#3D5BB8_100%)] lg:hover:bg-primary lg:hover:text-white text-white py-4 rounded-full font-bold text-base tracking-wide shadow-sm shadow-white lg:shadow-lg lg:shadow-blue-500/30 hover:scale-[1.02] active:scale-[0.98] transition-all flex justify-center items-center gap-2 cursor-pointer"
                             type="submit">
                             Ingresar
@@ -187,6 +187,24 @@
     </main>
     <script src="../assets/js/menu.js"></script>
     <script src="../assets/js/animations.js"></script>
+    <script>
+        const alertLogin = document.getElementById('formLogin');
+        const btnLogin = document.getElementById('btnLogin');
+
+        btnLogin.addEventListener('click', checkValidity);
+
+        function checkValidity() {
+            inputUsuario = alertLogin.querySelector('input[name="usuario"]');
+            inputPassword = alertLogin.querySelector('input[name="password"]');
+
+            if (inputUsuario.value=== "" || inputPassword.value==="") {
+                alert("Por favor ingresa tu usuario y contraseña.");
+            }else{
+                alert("Datos Incorrectos.");
+            }
+        }
+        
+    </script>
 </body>
 
 </html>

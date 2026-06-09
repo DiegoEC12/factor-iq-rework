@@ -104,8 +104,7 @@
                 <!-- Logo Mobile -->
                 <div class="lg:hidden flex justify-center mb-12">
                     <a href="index.html">
-                        <img src="assets/img/logo.png" alt="Logo IBP" class="h-12 w-auto"
-                            onerror="this.outerHTML='<div class=\'text-primary font-extrabold text-3xl tracking-tighter\'> BUP </div>'" />
+                        <img src="../assets/img/logo-transparent-white.png" alt="Logo IBP" class="h-12 w-auto"/>
                     </a>
                 </div>
 
@@ -129,7 +128,7 @@
                             </div>
                             <input
                                 class="w-full bg-slate-50 border border-slate-200 rounded-2xl py-4 pl-12 pr-4 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none"
-                                placeholder="Ingresa tu correo o DNI" required type="text" name="usuario" />
+                                placeholder="Ingresa tu correo o DNI" type="text" name="usuario" />
                         </div>
                     </div>
 
@@ -148,7 +147,7 @@
                             </div>
                             <input
                                 class="w-full bg-slate-50 border border-slate-200 rounded-2xl py-4 pl-12 pr-4 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none"
-                                placeholder="••••••••" required type="password" name="password" />
+                                placeholder="••••••••" type="password" name="password" />
                         </div>
                     </div>
 
@@ -184,26 +183,50 @@
                 </div>
             </div>
         </div>
+        <!-- Componente de Alerta de error -->
+        <dialog id="errorAlert" class="fixed flex bottom-0 left-0 m-4 items-center gap-3 bg-red-500 text-white px-5 py-3 rounded-xl shadow-lg border-0
+         opacity-0 translate-y-[-20px] transition-[opacity,transform,display,overlay] duration-500 allow-discrete
+         open:opacity-100 open:translate-y-0
+         starting:open:opacity-0 starting:open:translate-y-[-20px]">
+
+            <span class="icon-[material-symbols--check-circle] text-xl"></span>
+            <!-- Texto -->
+            <span class="font-medium text-sm"> Por favor ingresa tu usuario y contraseña.</span>
+        </dialog>
     </main>
+
     <script src="../assets/js/menu.js"></script>
     <script src="../assets/js/animations.js"></script>
     <script>
-        const alertLogin = document.getElementById('formLogin');
+        const formLogin = document.getElementById('formLogin');
         const btnLogin = document.getElementById('btnLogin');
+        const errorAlert = document.getElementById('errorAlert');
+        const alertText = errorAlert.querySelector('span:last-child');
 
-        btnLogin.addEventListener('click', checkValidity);
+        formLogin.addEventListener('submit', handleSubmit);
 
-        function checkValidity() {
-            inputUsuario = alertLogin.querySelector('input[name="usuario"]');
-            inputPassword = alertLogin.querySelector('input[name="password"]');
+        function handleSubmit(event) {
+            event.preventDefault();
 
-            if (inputUsuario.value=== "" || inputPassword.value==="") {
-                alert("Por favor ingresa tu usuario y contraseña.");
-            }else{
-                alert("Datos Incorrectos.");
+            const inputUsuario = formLogin.querySelector('input[name="usuario"]');
+            const inputPassword = formLogin.querySelector('input[name="password"]');
+
+            if (inputUsuario.value.trim() === '' || inputPassword.value.trim() === '') {
+                showAlert('Por favor ingresa tu usuario y contraseña.');
+            } else {
+                showAlert('Datos incorrectos. Intenta nuevamente o comunicate con soporte.');
             }
         }
-        
+
+        function showAlert(message) {
+            formLogin.reset();
+            alertText.textContent = message;
+            errorAlert.show();
+
+            setTimeout(() => {
+                errorAlert.close();
+            }, 3000);
+        }
     </script>
 </body>
 

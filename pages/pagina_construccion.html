@@ -66,65 +66,52 @@
             Abrir Modal
         </button>
     -->
-        <!-- Componente de Alerta -->
+        <!-- Componente de Alerta 
         <dialog id="successAlert" class="fixed top-5 right-5 m-0 flex items-center gap-3 bg-emerald-500 text-white px-5 py-3 rounded-xl shadow-lg border-0
          opacity-0 translate-y-[-20px] transition-[opacity,transform,display,overlay] duration-500 allow-discrete
          open:opacity-100 open:translate-y-0
          starting:open:opacity-0 starting:open:translate-y-[-20px]">
 
             <span class="icon-[material-symbols--check-circle] text-xl"></span>
-            <!-- Texto -->
+             
             <span class="font-medium text-sm">¡Operación completada con éxito!</span>
-        </dialog>
+        </dialog>-->
 
-        <!-- Botón de prueba -->
+       Botón de prueba
         <button onclick="triggerAlert()"
             class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg font-medium shadow">
             Simular Éxito
-        </button>
-    </main>
-    <script>
-        function triggerAlert() {
-            const alert = document.getElementById('successAlert');
+        </button> 
 
-            // 1. Abrimos con .show() para que NO bloquee la pantalla (no es un modal rígido)
-            alert.show();
-            form.reset();
-            // 2. Esperamos 3 segundos antes de iniciar el cierre
+        <!-- Componente de Alerta -->
+    <dialog id="errorAlert" class="fixed flex bottom-0 left-0 m-4 items-center gap-3 bg-red-500 text-white px-5 py-3 rounded-xl shadow-lg border-0
+         opacity-0 translate-y-[-20px] transition-[opacity,transform,display,overlay] duration-500 allow-discrete
+         open:opacity-100 open:translate-y-0
+         starting:open:opacity-0 starting:open:translate-y-[-20px]">
+
+        <span class="icon-[material-symbols--check-circle] text-xl"></span>
+        <!-- Texto -->
+        <span class="font-medium text-sm"> Por favor ingresa tu usuario y contraseña.</span>
+    </dialog>
+    <button id="btnError" class="cursor-pointer bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-medium shadow">
+        Simular Error
+    </button>
+    <script>
+        const btnError = document.getElementById('btnError');
+        const errorAlert = document.getElementById('errorAlert');
+
+        btnError.addEventListener('click', errorAlerta);
+        
+        function errorAlerta() {
+            errorAlert.show();
             setTimeout(() => {
-                alert.close();
+                errorAlert.close();
             }, 3000);
         }
-    </script>
-    <script>
-        var btnMostrar = document.getElementById('btnMostrar');
-        btnMostrar.addEventListener('click', mostrarAlerta);
-        var btnCerrar = document.getElementById('cerrarAlerta');
-        btnCerrar.addEventListener('click', cerrarAlerta);
-        var openModal = document.getElementById('openModal');
-        var myDialog = document.getElementById('myDialog');
-        openModal.addEventListener('click', function () {
-            myDialog.showModal();
-            setTimeout(() => {
-                myDialog.close();
-            }, 2800);
+        </script>
 
-        });
+    </main>
 
-        function mostrarAlerta() {
-            var openAlerta = document.getElementById('miAlerta');
-            openAlerta.showModal();
-            setTimeout(() => {
-                openAlerta.close();
-            }, 2800);
-
-        }
-
-        /*function cerrarAlerta() {
-            var closeAlerta = document.getElementById('miAlerta');
-            closeAlerta.close();
-        }*/
-    </script>
     <script src="../assets/js/animations.js"></script>
 </body>
 

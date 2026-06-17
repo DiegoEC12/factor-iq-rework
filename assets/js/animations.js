@@ -1,4 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const loadElements = Array.from(document.querySelectorAll(".animate-on-load"));
+    loadElements.forEach((el, index) => {
+        el.style.transitionDelay = `${index * 120}ms`;
+    });
+
+    requestAnimationFrame(() => {
+        loadElements.forEach((el) => el.classList.add("visible"));
+    });
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {

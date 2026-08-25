@@ -209,20 +209,36 @@
             const inputUsuario = formLogin.querySelector('input[name="usuario"]');
             const inputPassword = formLogin.querySelector('input[name="password"]');
 
-            if (inputUsuario.value.trim() === '' || inputPassword.value.trim() === '') {
-                showAlert('Por favor ingresa tu usuario y contraseña.');
+            const usuario = inputUsuario.value.trim();
+            const password = inputPassword.value.trim();
+
+            if (usuario === '' || password === '') {
+                showAlert('Por favor ingresa tu usuario y contraseña.', 'error');
+                return;
+            }
+
+            if (usuario === 'admMaqui' && password === 'adm123') {
+                showAlert('Acceso correcto. Redirigiendo...', 'success');
+                setTimeout(() => {
+                    window.location.href = 'https://dashboard-maquinarias.vercel.app/';
+                }, 1000);
             } else {
-                showAlert('Datos incorrectos. Intenta nuevamente o comunicate con soporte.');
+                showAlert('Datos incorrectos. Intenta nuevamente o comunicate con soporte.', 'error');
             }
         }
 
-        function showAlert(message) {
-            formLogin.reset();
+        function showAlert(message, type = 'error') {
             alertText.textContent = message;
-            errorAlert.show();
+            errorAlert.classList.remove('bg-red-500', 'bg-green-500');
+            if (type === 'success') {
+                errorAlert.classList.add('bg-green-500');
+            } else {
+                errorAlert.classList.add('bg-red-500');
+            }
+            try { errorAlert.show(); } catch(e) { /* ignore if already shown */ }
 
             setTimeout(() => {
-                errorAlert.close();
+                try { errorAlert.close(); } catch(e) {}
             }, 3000);
         }
     </script>

@@ -182,12 +182,12 @@
             </div>
         </div>
         <!-- Componente de Alerta de error -->
-        <dialog id="errorAlert" class="fixed flex bottom-0 left-0 m-4 items-center gap-3 bg-red-500 text-white px-5 py-3 rounded-xl shadow-lg border-0
+        <dialog id="errorAlert" class="fixed flex bottom-0 left-0 m-4 items-center gap-3 bg-red-500 text-white px-5 py-3 rounded-xl shadow-lg border-0 z-50
          opacity-0 translate-y-[-20px] transition-[opacity,transform,display,overlay] duration-500 allow-discrete
          open:opacity-100 open:translate-y-0
          starting:open:opacity-0 starting:open:translate-y-[-20px]">
 
-            <span class="icon-[material-symbols--check-circle] text-xl"></span>
+            <span class="icon-[material-symbols--error] text-xl"></span>
             <!-- Texto -->
             <span class="font-medium text-sm"> Por favor ingresa tu usuario y contraseña.</span>
         </dialog>
@@ -199,6 +199,7 @@
         const formLogin = document.getElementById('formLogin');
         const btnLogin = document.getElementById('btnLogin');
         const errorAlert = document.getElementById('errorAlert');
+        const alertIcon = errorAlert.querySelector('span:first-child');
         const alertText = errorAlert.querySelector('span:last-child');
 
         formLogin.addEventListener('submit', handleSubmit);
@@ -230,10 +231,13 @@
         function showAlert(message, type = 'error') {
             alertText.textContent = message;
             errorAlert.classList.remove('bg-red-500', 'bg-green-500');
+            alertIcon.className = 'text-xl'; // Reset clases del icono
             if (type === 'success') {
                 errorAlert.classList.add('bg-green-500');
+                alertIcon.classList.add('icon-[material-symbols--check-circle]');
             } else {
                 errorAlert.classList.add('bg-red-500');
+                alertIcon.classList.add('icon-[material-symbols--error]');
             }
             try { errorAlert.show(); } catch(e) { /* ignore if already shown */ }
 
